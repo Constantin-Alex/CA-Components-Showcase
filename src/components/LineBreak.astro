@@ -1,0 +1,26 @@
+---
+interface Props {
+lightMode?: boolean;
+}
+
+const { lightMode } = Astro.props;
+---
+
+<hr class={`${lightMode ? 'line-break-light' : 'line-break' }`}/>
+
+<style>
+.line-break {
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+  border: none;
+  margin-block: 1em;
+}
+
+.line-break-light {
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(190, 190, 190, 1) 30%, rgba(190, 190, 190, 1) 70%, rgba(0, 0, 0, 0) 100%);
+  border: none;
+  margin-block: 1em;
+}
+
+</style>

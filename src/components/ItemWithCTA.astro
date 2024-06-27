@@ -1,0 +1,60 @@
+---
+import LineBreak from './LineBreak.astro';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  cta: string;
+  bottomBreak?: boolean;
+}
+
+const {title, subtitle, cta, bottomBreak} = Astro.props;
+---
+<LineBreak lightMode={true}/>
+<div class="item">
+  <div class="text">
+    <p class="item-title">{title}</p>
+    <p class="separator">|</p>
+    <p class="item-subtitle">{subtitle}</p>
+  </div>
+  <button class="cta">{cta}</button>
+</div>
+{ bottomBreak && <LineBreak lightMode={true}/>}
+
+<style>
+  .item { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2em;
+    margin-inline: 5vw;
+    cursor: pointer;
+}
+
+  .text {
+    display: flex;
+    gap: 3em;
+    font-size: 1.2em;
+  }
+
+  .item-title {
+    font-weight: bold;
+  }
+
+  .cta {
+    transition: all 0.3s ease-in-out;
+    height: 4em;
+    background-color: transparent;
+    border: 2px solid black;
+    padding-inline: 2em;
+    border-radius: 50px;
+    font-weight: bold;
+  }
+
+  .cta:hover {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: var(--background);
+  }
+
+</style>

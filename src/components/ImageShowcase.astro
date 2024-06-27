@@ -1,0 +1,47 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+}
+
+const {image, title, description} = Astro.props;
+---
+
+<a class="content" href="https://linkedin.com">
+  <img src={image} alt="Image" class="image">
+  <div class="text-content">
+    <h3 class="title">{title}</h3>
+    <p class="description">{description}</p>
+  </div>
+</a>
+
+<style>
+.content {
+  border-radius: 50px;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border: 1px solid black;
+  text-decoration: none;
+  color: var(--text); 
+}
+
+.image {
+  width: inherit;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid black;
+}
+
+.text-content {
+  margin-bottom: 1em;
+  margin-inline: 1em;
+}
+
+.title {
+  font-size: 1.5em;
+}
+</style>
+

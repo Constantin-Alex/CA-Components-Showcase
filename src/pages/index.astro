@@ -1,0 +1,146 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import Hero from "../components/Hero.astro";
+import SectionWithImage from "../components/SectionWithImage.astro";
+import ShowcaseSection from "../components/ShowcaseSection.astro";
+import EncaseComponent from "../components/EncaseComponent.astro";
+import ExpandableItem from "../components/ExpandableItem.astro";
+import ItemWithCTA from "../components/ItemWithCTA.astro";
+import ImageShowcase from "../components/ImageShowcase.astro";
+import ImageShowcase2 from "../components/ImageShowcase2.astro";
+import ImageItem from "../components/ImageItem.astro";
+import Specifications from "../components/Specifications.astro";
+
+
+const title = "Chassis Autonomy Website Components Showcase";
+
+---
+
+<MainLayout title={title}>
+  <h1 class="title">{title}</h1>
+
+  <h1 class="title">HERO SECTIONS</h1>
+
+  <p><b>Notes:</b> The wider the image, the more space it will take (as seen in the difference between section 1 and 2)</p>
+
+  <h2 class="section-title">Hero - Showcase 1</h2>
+
+  <Hero title="This is an example title" subtitle="This is an example subtitle." image="images/Light Blur 2.png"/>
+
+  <h2 class="section-title">Hero - Showcase 2</h2>
+
+  <Hero title="This is a longer title to showcase the wrapping." subtitle="This is a longer subtitle just to showcase it" image="images/Top View of Motorway 4.png" />
+
+  <h1 class="title">ITEM SHOWCASE SECTIONS</h1>
+
+  <p>This is going to represent a part of a section. It will be used for displaying different information with a helper image. This section will come in either of the 2 background colors.
+    Also, since this kind of section will be used in at least a pair, the image will be changing from being on the left to being on the right and back to break the monotony of the text.</p>
+
+  <h2 class="section-title">Item Showcase Section - Showcase</h2>
+
+  <SectionWithImage title="Section Title" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." image="images/Corridor.png" index={0} alignment={0}/>
+  
+  <SectionWithImage title="Section Title" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." image="images/Corridor.png" index={1} alignment={1}/>
+  
+  <h1 class="title">SHOWCASE SECTION</h1>
+
+  <p>This section will be used to showcase a specific item. (e.g. the product on the home page). It has the blue background colour to attract attention.
+    It will probably have a call to action button. The second display is being encased. The encasing can occur with any component.</p>
+
+  <p><b>NOTE:</b> This component is missing something to fill the top-left section, but no ideas are still being brainstormed.</p>
+    
+  <h2 class="section-title">Showcase Section 2 - Showcase</h2>
+
+  <ShowcaseSection text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." image="images/shuttle.png"/>
+  
+  <h2 class="section-title">Showcase Section Encased - Showcase</h2>
+
+  <EncaseComponent>
+    <ShowcaseSection text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, " image="images/shuttle.png"/>
+  </EncaseComponent>
+
+  <h1 class="title">Expandable Sections</h1>
+
+  <p>This sections will be used for a list of items that we want to only display the title for. The rest of the information can be found on-click.</p>
+    
+  <h2 class="section-title">Expandable Sections - Showcase</h2>
+
+  <ExpandableItem title="What is the purpose of this website?" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+
+  <ExpandableItem title="What is the purpose of this website?" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." bottomBreak />
+
+  <h1 class="title">List Item</h1>
+
+  <p>The main purpose of this item will be for the vacancies, but these sections can have other uses.</p>
+
+  <h2 class="section-title">List Item - Showcase</h2>
+
+  <ItemWithCTA title="Website Developer Intern" subtitle="United Kingdom" cta="Details"/>
+
+  <ItemWithCTA title="Website Developer Intern" subtitle="United Kingdom" cta="Details"/>
+  
+  <ItemWithCTA title="Website Developer Intern" subtitle="United Kingdom" cta="Details"/>
+  
+  <ItemWithCTA title="Website Developer Intern" subtitle="United Kingdom" cta="Details" bottomBreak/>
+
+  <h1 class="title">Showcase with Image</h1>
+
+  <p>This section can be used and adapted to attract attention using an image. Two variants have been proposed, with only one to be kept.
+    One of them displays the information immediately, whilst one forces a hover to display extra information. As displayed here, one of its main
+    uses will be for the "Meet the team" section</p>
+
+  <h2 class="section-title">Showcase with Image - Showcase</h2>
+
+  <div class="center">
+    <ImageShowcase image="images/Tom.jpeg" title="Test" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+    <ImageShowcase2 image="images/Tom.jpeg" title="Test" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+  </div>
+
+  <h1 class="title">Logos</h1>
+
+  <p>This section is going to be used for partners and supported by sections. They will initially be in grayscale, with their true colours being
+  shown on hover.</p>
+
+  <h2 class="section-title">Logo - Showcase</h2>
+
+  <div class="center">
+    <ImageItem image="images/linkedin.png" url="https://linkedin.com"/>
+    <ImageItem image="images/youtube.png" url="https://youtube.com"/>
+  </div>
+
+  <h1 class="title">Specifications</h1>
+
+  <p>This section will be used for any specifications. It will have an image on the right, a title and the specifications on the right.
+    The specifications will be in a table for, with the left column being the name of the value, and the right one containing the actual value.</p>
+
+  <h2 class="section-title">Specifications - Showcase</h2>
+
+  <Specifications image="images/actuator.png" name="Test me" specs={[{title:"Test", info:"Testme"}, {title:"Test", info:"Testme"}, {title:"Test", info:"Testme"}]} />
+
+  <div class="margin"></div>
+
+  <style>
+    .title {
+      text-align: center; 
+    }
+
+    .section-title{
+      text-transform: uppercase;
+      margin-left: 1em;
+   
+      margin-top: 3em;
+      margin-bottom: 1em;
+    }
+      
+    .margin { 
+      height: 300px;
+    }
+    .center {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+    }
+    </style>
+</MainLayout>
